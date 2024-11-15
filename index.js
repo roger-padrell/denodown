@@ -18,7 +18,7 @@ function sendCommand(ip, command){
 }
 
 function prevSendComm(e){
-  console.log("sended")
+  console.log(e)
 }
   
 function loadUI(){
