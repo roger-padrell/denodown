@@ -23,7 +23,7 @@ function prevSendComm(e){
   
 function loadUI(){
   for(let a in dt.all){
-    body.innerHTML += "<div><p>" + dt.names[a] + "</p><button onclick='prevSendComm(e)'>Send</button></div>";
+    body.innerHTML += "<div><p>" + dt.names[a] + "</p><button>Send</button></div>";
   }
 }
 
