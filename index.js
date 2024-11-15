@@ -19,7 +19,7 @@ function sendCommand(ip, command){
 
 function prevSendComm(e){
   let arr = Array.from(document.getElementsByTagName("button")) 
-  console.log(arr.indexOf(e));
+  console.log(dt.all[e.target.id]));
 }
   
 function loadUI(){
@@ -27,7 +27,10 @@ function loadUI(){
     body.innerHTML += "<div><p>" + dt.names[a] + "</p><button>Send</button></div>";
   }
   let arr = Array.from(document.getElementsByTagName("button"));
-  for(let a in arr){arr[a].onclick=prevSendComm} 
+  for(let a in arr){
+    arr[a].onclick=prevSendComm;
+    arr[a].id=a;
+  } 
 }
 
 window.onload = async function(){
