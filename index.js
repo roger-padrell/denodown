@@ -16,3 +16,18 @@ const requestOptions = {
 function sendCommand(ip, command){
   let c = command.replaceAll(",", " ");
 }
+
+function prevSendComm(e){
+  console.log("sended")
+}
+  
+function loadUI(){
+  for(let a in dt.all){
+    body.innerHTML += "<div><p>" + dt.names[a] + "</p><button onclick='prevSendComm(e)'>Send</button></div>";
+  }
+}
+
+window.onload = async function(){
+  window.dt = await getDataFromDB();
+  loadUI()
+}
