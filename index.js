@@ -18,7 +18,8 @@ function sendCommand(ip, command){
 }
 
 function prevSendComm(e){
-  console.log(e)
+  let arr = Array.from(document.getElementsByTagName("button")) 
+  console.log(arr.indexOf(e));
 }
   
 function loadUI(){
