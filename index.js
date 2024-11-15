@@ -14,12 +14,14 @@ const requestOptions = {
    return result;
 }
 function sendCommand(ip, command){
-  let c = command.replaceAll(",", " ");
+  let c = command.replaceAll(" ",",");
+  console.log(ip, c)
 }
 
 function prevSendComm(e){
   let arr = Array.from(document.getElementsByTagName("button")) 
-  console.log(dt.all[e.target.id]);
+  let x = dt.all[e.target.id];
+  sendCommand(x, prompt("Command:"))
 }
   
 function loadUI(){
