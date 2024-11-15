@@ -25,6 +25,8 @@ function loadUI(){
   for(let a in dt.all){
     body.innerHTML += "<div><p>" + dt.names[a] + "</p><button>Send</button></div>";
   }
+  let arr = Array.from(document.getElementsByTagName("button"));
+  for(let a in arr){arr[a].onclick=prevSendComm} 
 }
 
 window.onload = async function(){
